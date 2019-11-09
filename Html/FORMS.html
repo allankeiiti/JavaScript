@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>D.O.M.</title>
+        <!-- Posso criar funções dentro da tag Script -->
+        <script language="javascript">
+            function onloadMessage(message){
+                alert(message)
+            }
+            function valida(){
+                var nome = document.getElementById('nomeId')
+                if (nome.value.trim() == ""){
+                    alert('Campo nome não pode estar branco')
+                } else {
+                    //Desta forma imprime o objeto
+                    alert(nome)
+                    //Desta forma imprime o Nome digitado no campo
+                    alert(nome.value.trim())                
+                }
+            }
+        </script>
+    </head>
+    <body onload="onloadMessage('Formulários')">
+        <h1>Formulário</h1>
+        <form>
+            <input type='text' name='nome' id='nomeId' placeholder="Insira seu nome aqui">
+            <input type='submit' onclick='valida()'>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>D.O.M.</title>
+        <!-- Posso criar funções dentro da tag Script -->
+        <script language="javascript">
+            function onloadMessage(message){
+                alert(message)
+            }
+
+            function mudaCor(cor){
+                var elemento = document.getElementById('mensagem')
+                if (cor == 'white'){
+                    elemento.style.color = cor
+                    elemento.style.backgroundColor = 'black'
+                } else {
+                    elemento.style.color = cor
+                    elemento.style.backgroundColor = 'white'
+                }
+            }
+        </script>
+    </head>
+    <body onload="onloadMessage('D.O.M. Page')">
+        <span id='mensagem'>SPAN ID MESSAGE?</span>
+        <h1>D.O.M.</h1>
+        <h3>DOM (Document Object Model)</h3>
+        <button onclick="mudaCor('blue')">Blue</button>
+        <br>
+        <button onclick="mudaCor('red')">Red</button>
+        <br>
+        <button onclick="mudaCor('yellow')">Yellow</button>
+        <br>
+        <button onclick="mudaCor('green')">Green</button>
+        <br>
+        <button onclick="mudaCor('purple')">Purple</button>
+        <br>
+        <button onclick="mudaCor('white')">White</button>
+    </body>
+</html>
